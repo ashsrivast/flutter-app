@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
   Quiz quiz;
   List<Results> results;
   Future<void> fetchQuestions() async {
-    var res = await http.get("https://opentdb.com/api.php?amount=20");
+    var res = await http.get("http://opentdb.com/api.php?amount=20");
     var decRes = jsonDecode(res.body);
     print(decRes);
     quiz = Quiz.fromJson(decRes);
